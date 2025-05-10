@@ -4,7 +4,7 @@ import { compare } from "bcrypt";
 
 import prismadb from "@/lib/prismadb";
 
-export default NextAuth ({
+export default NextAuth({
     providers: [
         Credentials({
             id: "credentials",
@@ -56,3 +56,4 @@ export default NextAuth ({
     },
     secret: process.env.NEXTAUTH_SECRET,
 });
+

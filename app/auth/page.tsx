@@ -27,6 +27,7 @@ const Auth = () => {
         }
     }, [email, name, password]);
 
+
     return (
       <div
         className="relative h-full w-full bg-no-repeat bg-center bg-fixed bg-cover"
@@ -68,7 +69,7 @@ const Auth = () => {
                             value={password}
                         />
                     </div>
-                    <button onClick= {register} className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover:bg-red-700 transition">
+                    <button onClick= { register} className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover:bg-red-700 transition">
                         {variant === "login" ? "Login" : "Sign up"}
                     </button>
                     <p className="text-neutral-500 mt-12">
