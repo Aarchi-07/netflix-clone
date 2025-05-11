@@ -1,10 +1,10 @@
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import { compare } from "bcrypt";
-
 import prismadb from "@/lib/prismadb";
+import { AuthOptions } from "next-auth";
 
-export default NextAuth({
+const authOptions: AuthOptions = {
     providers: [
         Credentials({
             id: "credentials",
@@ -55,5 +55,9 @@ export default NextAuth({
         secret: process.env.NEXTAUTH_JWT_SECRET,
     },
     secret: process.env.NEXTAUTH_SECRET,
-});
+};
 
+const handler = NextAuth(authOptions);
+
+// Export named functions for GET and POST
+export { handler as GET, handler as POST };

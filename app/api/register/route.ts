@@ -15,6 +15,7 @@ export async function POST(request: Request) {
         }
 
         const { name, email, password } = body;
+        console.log('REGISTER INPUT:', { name, email, password });
 
         const existingUser = await prismadb.user.findUnique({
             where: {
