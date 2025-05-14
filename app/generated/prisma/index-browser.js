@@ -130,7 +130,7 @@ exports.Prisma.AccountScalarFieldEnum = {
   userId: 'userId',
   type: 'type',
   provider: 'provider',
-  providerAccoundId: 'providerAccoundId',
+  providerAccountId: 'providerAccountId',
   refresh_token: 'refresh_token',
   access_token: 'access_token',
   expires_at: 'expires_at',

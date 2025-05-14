@@ -15,10 +15,10 @@ datasource db {
 }
 
 model User {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
-  name String
-  image String?
-  email String? @unique
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  image       String?
+  email       String @unique
   emailVerified DateTime?
   hashedPassword String?
   createdAt DateTime @default(now())
@@ -33,7 +33,7 @@ model Account {
   userId String @db.ObjectId
   type String
   provider String
-  providerAccoundId String
+  providerAccountId String
   refresh_token String? @db.String
   access_token String? @db.String
   expires_at Int?
@@ -44,7 +44,7 @@ model Account {
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@unique([provider, providerAccoundId])
+  @@unique([provider, providerAccountId])
 }
 
 model Session {

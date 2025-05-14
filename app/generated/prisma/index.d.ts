@@ -1383,7 +1383,7 @@ export namespace Prisma {
     id: string
     name: string
     image: string | null
-    email: string | null
+    email: string
     emailVerified: Date | null
     hashedPassword: string | null
     createdAt: Date
@@ -1454,7 +1454,7 @@ export namespace Prisma {
       id: string
       name: string
       image: string | null
-      email: string | null
+      email: string
       emailVerified: Date | null
       hashedPassword: string | null
       createdAt: Date
@@ -2324,7 +2324,7 @@ export namespace Prisma {
     userId: string | null
     type: string | null
     provider: string | null
-    providerAccoundId: string | null
+    providerAccountId: string | null
     refresh_token: string | null
     access_token: string | null
     expires_at: number | null
@@ -2339,7 +2339,7 @@ export namespace Prisma {
     userId: string | null
     type: string | null
     provider: string | null
-    providerAccoundId: string | null
+    providerAccountId: string | null
     refresh_token: string | null
     access_token: string | null
     expires_at: number | null
@@ -2354,7 +2354,7 @@ export namespace Prisma {
     userId: number
     type: number
     provider: number
-    providerAccoundId: number
+    providerAccountId: number
     refresh_token: number
     access_token: number
     expires_at: number
@@ -2379,7 +2379,7 @@ export namespace Prisma {
     userId?: true
     type?: true
     provider?: true
-    providerAccoundId?: true
+    providerAccountId?: true
     refresh_token?: true
     access_token?: true
     expires_at?: true
@@ -2394,7 +2394,7 @@ export namespace Prisma {
     userId?: true
     type?: true
     provider?: true
-    providerAccoundId?: true
+    providerAccountId?: true
     refresh_token?: true
     access_token?: true
     expires_at?: true
@@ -2409,7 +2409,7 @@ export namespace Prisma {
     userId?: true
     type?: true
     provider?: true
-    providerAccoundId?: true
+    providerAccountId?: true
     refresh_token?: true
     access_token?: true
     expires_at?: true
@@ -2511,7 +2511,7 @@ export namespace Prisma {
     userId: string
     type: string
     provider: string
-    providerAccoundId: string
+    providerAccountId: string
     refresh_token: string | null
     access_token: string | null
     expires_at: number | null
@@ -2545,7 +2545,7 @@ export namespace Prisma {
     userId?: boolean
     type?: boolean
     provider?: boolean
-    providerAccoundId?: boolean
+    providerAccountId?: boolean
     refresh_token?: boolean
     access_token?: boolean
     expires_at?: boolean
@@ -2563,7 +2563,7 @@ export namespace Prisma {
     userId?: boolean
     type?: boolean
     provider?: boolean
-    providerAccoundId?: boolean
+    providerAccountId?: boolean
     refresh_token?: boolean
     access_token?: boolean
     expires_at?: boolean
@@ -2573,7 +2573,7 @@ export namespace Prisma {
     session_state?: boolean
   }
 
-  export type AccountOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "type" | "provider" | "providerAccoundId" | "refresh_token" | "access_token" | "expires_at" | "token_type" | "scope" | "id_token" | "session_state", ExtArgs["result"]["account"]>
+  export type AccountOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "type" | "provider" | "providerAccountId" | "refresh_token" | "access_token" | "expires_at" | "token_type" | "scope" | "id_token" | "session_state", ExtArgs["result"]["account"]>
   export type AccountInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
   }
@@ -2588,7 +2588,7 @@ export namespace Prisma {
       userId: string
       type: string
       provider: string
-      providerAccoundId: string
+      providerAccountId: string
       refresh_token: string | null
       access_token: string | null
       expires_at: number | null
@@ -2993,7 +2993,7 @@ export namespace Prisma {
     readonly userId: FieldRef<"Account", 'String'>
     readonly type: FieldRef<"Account", 'String'>
     readonly provider: FieldRef<"Account", 'String'>
-    readonly providerAccoundId: FieldRef<"Account", 'String'>
+    readonly providerAccountId: FieldRef<"Account", 'String'>
     readonly refresh_token: FieldRef<"Account", 'String'>
     readonly access_token: FieldRef<"Account", 'String'>
     readonly expires_at: FieldRef<"Account", 'Int'>
@@ -6256,7 +6256,7 @@ export namespace Prisma {
     userId: 'userId',
     type: 'type',
     provider: 'provider',
-    providerAccoundId: 'providerAccoundId',
+    providerAccountId: 'providerAccountId',
     refresh_token: 'refresh_token',
     access_token: 'access_token',
     expires_at: 'expires_at',
@@ -6389,7 +6389,7 @@ export namespace Prisma {
     id?: StringFilter<"User"> | string
     name?: StringFilter<"User"> | string
     image?: StringNullableFilter<"User"> | string | null
-    email?: StringNullableFilter<"User"> | string | null
+    email?: StringFilter<"User"> | string
     emailVerified?: DateTimeNullableFilter<"User"> | Date | string | null
     hashedPassword?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
@@ -6452,7 +6452,7 @@ export namespace Prisma {
     id?: StringWithAggregatesFilter<"User"> | string
     name?: StringWithAggregatesFilter<"User"> | string
     image?: StringNullableWithAggregatesFilter<"User"> | string | null
-    email?: StringNullableWithAggregatesFilter<"User"> | string | null
+    email?: StringWithAggregatesFilter<"User"> | string
     emailVerified?: DateTimeNullableWithAggregatesFilter<"User"> | Date | string | null
     hashedPassword?: StringNullableWithAggregatesFilter<"User"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
@@ -6468,7 +6468,7 @@ export namespace Prisma {
     userId?: StringFilter<"Account"> | string
     type?: StringFilter<"Account"> | string
     provider?: StringFilter<"Account"> | string
-    providerAccoundId?: StringFilter<"Account"> | string
+    providerAccountId?: StringFilter<"Account"> | string
     refresh_token?: StringNullableFilter<"Account"> | string | null
     access_token?: StringNullableFilter<"Account"> | string | null
     expires_at?: IntNullableFilter<"Account"> | number | null
@@ -6484,7 +6484,7 @@ export namespace Prisma {
     userId?: SortOrder
     type?: SortOrder
     provider?: SortOrder
-    providerAccoundId?: SortOrder
+    providerAccountId?: SortOrder
     refresh_token?: SortOrder
     access_token?: SortOrder
     expires_at?: SortOrder
@@ -6497,14 +6497,14 @@ export namespace Prisma {
 
   export type AccountWhereUniqueInput = Prisma.AtLeast<{
     id?: string
-    provider_providerAccoundId?: AccountProviderProviderAccoundIdCompoundUniqueInput
+    provider_providerAccountId?: AccountProviderProviderAccountIdCompoundUniqueInput
     AND?: AccountWhereInput | AccountWhereInput[]
     OR?: AccountWhereInput[]
     NOT?: AccountWhereInput | AccountWhereInput[]
     userId?: StringFilter<"Account"> | string
     type?: StringFilter<"Account"> | string
     provider?: StringFilter<"Account"> | string
-    providerAccoundId?: StringFilter<"Account"> | string
+    providerAccountId?: StringFilter<"Account"> | string
     refresh_token?: StringNullableFilter<"Account"> | string | null
     access_token?: StringNullableFilter<"Account"> | string | null
     expires_at?: IntNullableFilter<"Account"> | number | null
@@ -6513,14 +6513,14 @@ export namespace Prisma {
     id_token?: StringNullableFilter<"Account"> | string | null
     session_state?: StringNullableFilter<"Account"> | string | null
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
-  }, "id" | "provider_providerAccoundId">
+  }, "id" | "provider_providerAccountId">
 
   export type AccountOrderByWithAggregationInput = {
     id?: SortOrder
     userId?: SortOrder
     type?: SortOrder
     provider?: SortOrder
-    providerAccoundId?: SortOrder
+    providerAccountId?: SortOrder
     refresh_token?: SortOrder
     access_token?: SortOrder
     expires_at?: SortOrder
@@ -6543,7 +6543,7 @@ export namespace Prisma {
     userId?: StringWithAggregatesFilter<"Account"> | string
     type?: StringWithAggregatesFilter<"Account"> | string
     provider?: StringWithAggregatesFilter<"Account"> | string
-    providerAccoundId?: StringWithAggregatesFilter<"Account"> | string
+    providerAccountId?: StringWithAggregatesFilter<"Account"> | string
     refresh_token?: StringNullableWithAggregatesFilter<"Account"> | string | null
     access_token?: StringNullableWithAggregatesFilter<"Account"> | string | null
     expires_at?: IntNullableWithAggregatesFilter<"Account"> | number | null
@@ -6717,7 +6717,7 @@ export namespace Prisma {
     id?: string
     name: string
     image?: string | null
-    email?: string | null
+    email: string
     emailVerified?: Date | string | null
     hashedPassword?: string | null
     createdAt?: Date | string
@@ -6731,7 +6731,7 @@ export namespace Prisma {
     id?: string
     name: string
     image?: string | null
-    email?: string | null
+    email: string
     emailVerified?: Date | string | null
     hashedPassword?: string | null
     createdAt?: Date | string
@@ -6744,7 +6744,7 @@ export namespace Prisma {
   export type UserUpdateInput = {
     name?: StringFieldUpdateOperationsInput | string
     image?: NullableStringFieldUpdateOperationsInput | string | null
-    email?: NullableStringFieldUpdateOperationsInput | string | null
+    email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     hashedPassword?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -6757,7 +6757,7 @@ export namespace Prisma {
   export type UserUncheckedUpdateInput = {
     name?: StringFieldUpdateOperationsInput | string
     image?: NullableStringFieldUpdateOperationsInput | string | null
-    email?: NullableStringFieldUpdateOperationsInput | string | null
+    email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     hashedPassword?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -6771,7 +6771,7 @@ export namespace Prisma {
     id?: string
     name: string
     image?: string | null
-    email?: string | null
+    email: string
     emailVerified?: Date | string | null
     hashedPassword?: string | null
     createdAt?: Date | string
@@ -6782,7 +6782,7 @@ export namespace Prisma {
   export type UserUpdateManyMutationInput = {
     name?: StringFieldUpdateOperationsInput | string
     image?: NullableStringFieldUpdateOperationsInput | string | null
-    email?: NullableStringFieldUpdateOperationsInput | string | null
+    email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     hashedPassword?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -6793,7 +6793,7 @@ export namespace Prisma {
   export type UserUncheckedUpdateManyInput = {
     name?: StringFieldUpdateOperationsInput | string
     image?: NullableStringFieldUpdateOperationsInput | string | null
-    email?: NullableStringFieldUpdateOperationsInput | string | null
+    email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     hashedPassword?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -6805,7 +6805,7 @@ export namespace Prisma {
     id?: string
     type: string
     provider: string
-    providerAccoundId: string
+    providerAccountId: string
     refresh_token?: string | null
     access_token?: string | null
     expires_at?: number | null
@@ -6821,7 +6821,7 @@ export namespace Prisma {
     userId: string
     type: string
     provider: string
-    providerAccoundId: string
+    providerAccountId: string
     refresh_token?: string | null
     access_token?: string | null
     expires_at?: number | null
@@ -6834,7 +6834,7 @@ export namespace Prisma {
   export type AccountUpdateInput = {
     type?: StringFieldUpdateOperationsInput | string
     provider?: StringFieldUpdateOperationsInput | string
-    providerAccoundId?: StringFieldUpdateOperationsInput | string
+    providerAccountId?: StringFieldUpdateOperationsInput | string
     refresh_token?: NullableStringFieldUpdateOperationsInput | string | null
     access_token?: NullableStringFieldUpdateOperationsInput | string | null
     expires_at?: NullableIntFieldUpdateOperationsInput | number | null
@@ -6849,7 +6849,7 @@ export namespace Prisma {
     userId?: StringFieldUpdateOperationsInput | string
     type?: StringFieldUpdateOperationsInput | string
     provider?: StringFieldUpdateOperationsInput | string
-    providerAccoundId?: StringFieldUpdateOperationsInput | string
+    providerAccountId?: StringFieldUpdateOperationsInput | string
     refresh_token?: NullableStringFieldUpdateOperationsInput | string | null
     access_token?: NullableStringFieldUpdateOperationsInput | string | null
     expires_at?: NullableIntFieldUpdateOperationsInput | number | null
@@ -6864,7 +6864,7 @@ export namespace Prisma {
     userId: string
     type: string
     provider: string
-    providerAccoundId: string
+    providerAccountId: string
     refresh_token?: string | null
     access_token?: string | null
     expires_at?: number | null
@@ -6877,7 +6877,7 @@ export namespace Prisma {
   export type AccountUpdateManyMutationInput = {
     type?: StringFieldUpdateOperationsInput | string
     provider?: StringFieldUpdateOperationsInput | string
-    providerAccoundId?: StringFieldUpdateOperationsInput | string
+    providerAccountId?: StringFieldUpdateOperationsInput | string
     refresh_token?: NullableStringFieldUpdateOperationsInput | string | null
     access_token?: NullableStringFieldUpdateOperationsInput | string | null
     expires_at?: NullableIntFieldUpdateOperationsInput | number | null
@@ -6891,7 +6891,7 @@ export namespace Prisma {
     userId?: StringFieldUpdateOperationsInput | string
     type?: StringFieldUpdateOperationsInput | string
     provider?: StringFieldUpdateOperationsInput | string
-    providerAccoundId?: StringFieldUpdateOperationsInput | string
+    providerAccountId?: StringFieldUpdateOperationsInput | string
     refresh_token?: NullableStringFieldUpdateOperationsInput | string | null
     access_token?: NullableStringFieldUpdateOperationsInput | string | null
     expires_at?: NullableIntFieldUpdateOperationsInput | number | null
@@ -7255,9 +7255,9 @@ export namespace Prisma {
     isNot?: UserWhereInput
   }
 
-  export type AccountProviderProviderAccoundIdCompoundUniqueInput = {
+  export type AccountProviderProviderAccountIdCompoundUniqueInput = {
     provider: string
-    providerAccoundId: string
+    providerAccountId: string
   }
 
   export type AccountCountOrderByAggregateInput = {
@@ -7265,7 +7265,7 @@ export namespace Prisma {
     userId?: SortOrder
     type?: SortOrder
     provider?: SortOrder
-    providerAccoundId?: SortOrder
+    providerAccountId?: SortOrder
     refresh_token?: SortOrder
     access_token?: SortOrder
     expires_at?: SortOrder
@@ -7284,7 +7284,7 @@ export namespace Prisma {
     userId?: SortOrder
     type?: SortOrder
     provider?: SortOrder
-    providerAccoundId?: SortOrder
+    providerAccountId?: SortOrder
     refresh_token?: SortOrder
     access_token?: SortOrder
     expires_at?: SortOrder
@@ -7299,7 +7299,7 @@ export namespace Prisma {
     userId?: SortOrder
     type?: SortOrder
     provider?: SortOrder
-    providerAccoundId?: SortOrder
+    providerAccountId?: SortOrder
     refresh_token?: SortOrder
     access_token?: SortOrder
     expires_at?: SortOrder
@@ -7748,7 +7748,7 @@ export namespace Prisma {
     id?: string
     type: string
     provider: string
-    providerAccoundId: string
+    providerAccountId: string
     refresh_token?: string | null
     access_token?: string | null
     expires_at?: number | null
@@ -7762,7 +7762,7 @@ export namespace Prisma {
     id?: string
     type: string
     provider: string
-    providerAccoundId: string
+    providerAccountId: string
     refresh_token?: string | null
     access_token?: string | null
     expires_at?: number | null
@@ -7831,7 +7831,7 @@ export namespace Prisma {
     userId?: StringFilter<"Account"> | string
     type?: StringFilter<"Account"> | string
     provider?: StringFilter<"Account"> | string
-    providerAccoundId?: StringFilter<"Account"> | string
+    providerAccountId?: StringFilter<"Account"> | string
     refresh_token?: StringNullableFilter<"Account"> | string | null
     access_token?: StringNullableFilter<"Account"> | string | null
     expires_at?: IntNullableFilter<"Account"> | number | null
@@ -7845,7 +7845,7 @@ export namespace Prisma {
     id?: string
     name: string
     image?: string | null
-    email?: string | null
+    email: string
     emailVerified?: Date | string | null
     hashedPassword?: string | null
     createdAt?: Date | string
@@ -7858,7 +7858,7 @@ export namespace Prisma {
     id?: string
     name: string
     image?: string | null
-    email?: string | null
+    email: string
     emailVerified?: Date | string | null
     hashedPassword?: string | null
     createdAt?: Date | string
@@ -7886,7 +7886,7 @@ export namespace Prisma {
   export type UserUpdateWithoutAccountsInput = {
     name?: StringFieldUpdateOperationsInput | string
     image?: NullableStringFieldUpdateOperationsInput | string | null
-    email?: NullableStringFieldUpdateOperationsInput | string | null
+    email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     hashedPassword?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -7898,7 +7898,7 @@ export namespace Prisma {
   export type UserUncheckedUpdateWithoutAccountsInput = {
     name?: StringFieldUpdateOperationsInput | string
     image?: NullableStringFieldUpdateOperationsInput | string | null
-    email?: NullableStringFieldUpdateOperationsInput | string | null
+    email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     hashedPassword?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -7911,7 +7911,7 @@ export namespace Prisma {
     id?: string
     name: string
     image?: string | null
-    email?: string | null
+    email: string
     emailVerified?: Date | string | null
     hashedPassword?: string | null
     createdAt?: Date | string
@@ -7924,7 +7924,7 @@ export namespace Prisma {
     id?: string
     name: string
     image?: string | null
-    email?: string | null
+    email: string
     emailVerified?: Date | string | null
     hashedPassword?: string | null
     createdAt?: Date | string
@@ -7952,7 +7952,7 @@ export namespace Prisma {
   export type UserUpdateWithoutSessionsInput = {
     name?: StringFieldUpdateOperationsInput | string
     image?: NullableStringFieldUpdateOperationsInput | string | null
-    email?: NullableStringFieldUpdateOperationsInput | string | null
+    email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     hashedPassword?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -7964,7 +7964,7 @@ export namespace Prisma {
   export type UserUncheckedUpdateWithoutSessionsInput = {
     name?: StringFieldUpdateOperationsInput | string
     image?: NullableStringFieldUpdateOperationsInput | string | null
-    email?: NullableStringFieldUpdateOperationsInput | string | null
+    email?: StringFieldUpdateOperationsInput | string
     emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     hashedPassword?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -7983,7 +7983,7 @@ export namespace Prisma {
     id?: string
     type: string
     provider: string
-    providerAccoundId: string
+    providerAccountId: string
     refresh_token?: string | null
     access_token?: string | null
     expires_at?: number | null
@@ -8011,7 +8011,7 @@ export namespace Prisma {
   export type AccountUpdateWithoutUserInput = {
     type?: StringFieldUpdateOperationsInput | string
     provider?: StringFieldUpdateOperationsInput | string
-    providerAccoundId?: StringFieldUpdateOperationsInput | string
+    providerAccountId?: StringFieldUpdateOperationsInput | string
     refresh_token?: NullableStringFieldUpdateOperationsInput | string | null
     access_token?: NullableStringFieldUpdateOperationsInput | string | null
     expires_at?: NullableIntFieldUpdateOperationsInput | number | null
@@ -8024,7 +8024,7 @@ export namespace Prisma {
   export type AccountUncheckedUpdateWithoutUserInput = {
     type?: StringFieldUpdateOperationsInput | string
     provider?: StringFieldUpdateOperationsInput | string
-    providerAccoundId?: StringFieldUpdateOperationsInput | string
+    providerAccountId?: StringFieldUpdateOperationsInput | string
     refresh_token?: NullableStringFieldUpdateOperationsInput | string | null
     access_token?: NullableStringFieldUpdateOperationsInput | string | null
     expires_at?: NullableIntFieldUpdateOperationsInput | number | null
@@ -8037,7 +8037,7 @@ export namespace Prisma {
   export type AccountUncheckedUpdateManyWithoutUserInput = {
     type?: StringFieldUpdateOperationsInput | string
     provider?: StringFieldUpdateOperationsInput | string
-    providerAccoundId?: StringFieldUpdateOperationsInput | string
+    providerAccountId?: StringFieldUpdateOperationsInput | string
     refresh_token?: NullableStringFieldUpdateOperationsInput | string | null
     access_token?: NullableStringFieldUpdateOperationsInput | string | null
     expires_at?: NullableIntFieldUpdateOperationsInput | number | null

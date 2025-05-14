@@ -11,6 +11,7 @@ import prismadb from "@/lib/prismadb";
 import { AuthOptions } from "next-auth";
 
 const authOptions: AuthOptions = {
+    adapter: PrismaAdapter(prismadb),
     providers: [
         GithubProvider({
             clientId: process.env.GITHUB_ID || "",
@@ -62,7 +63,6 @@ const authOptions: AuthOptions = {
         signIn: "/auth",
     },
     debug: process.env.NODE_ENV === "development",
-    adapter: PrismaAdapter(prismadb),
     session: {
         strategy: "jwt",
     },
