@@ -76,3 +76,4 @@ const handler = NextAuth(authOptions);
 
 // Export named functions for GET and POST
 export { handler as GET, handler as POST };
+export { authOptions }; 
