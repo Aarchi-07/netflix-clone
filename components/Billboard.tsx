@@ -26,9 +26,9 @@ const Billboard = () => {
                 <div className="flex flex-row items-center mt-3 md:mt-4 gap-3">
                     <button
                         className="
-                            bg-white
+                            bg-zinc-800
                             text-white
-                            bg-opacity-30
+                            bg-opacity-70
                             rounded-md
                             py-1 md:py-2
                             px-2 md:px-4
@@ -38,8 +38,9 @@ const Billboard = () => {
                             flex
                             flex-row
                             items-center
-                            hover:bg-opacity-20
+                            hover:bg-opacity-90
                             transition
+                            cursor-pointer
                         "
                     >
                         <AiOutlineInfoCircle className=" mr-1" />
