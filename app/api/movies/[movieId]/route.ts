@@ -9,11 +9,12 @@ export async function GET(
     try {
         await serverAuth();
 
-        const movieId = params.movieId;
-
-        if (!movieId) {
+        // Handle params validation
+        if (!params || !params.movieId) {
             return new NextResponse('Invalid ID', { status: 400 });
         }
+        
+        const { movieId } = params;
 
         const movie = await prismadb.movie.findUnique({
             where: {
